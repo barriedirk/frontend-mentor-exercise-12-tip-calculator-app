@@ -1,0 +1,109 @@
+:root {
+  --fw-thin: 100;
+  --fw-extralight: 200;
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+
+  --ff: "Space Mono", monospace;
+
+  --clr-green-400: hsl(172, 67%, 45%);
+  --clr-green-900: hsl(183, 100%, 15%);
+
+  --clr-grey-500: hsl(186, 14%, 43%);
+  --clr-grey-400: hsl(184, 14%, 56%);
+  --clr-grey-200: hsl(185, 41%, 84%);
+  --clr-grey-50: hsl(189, 47%, 97%);
+
+  --clr-white: hsl(0, 100%, 100%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+main,
+.tip-calculator__result--wrapper,
+.tip-calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: var(--ff);
+  font-size: 2.4rem;
+  font-weight: var(--fw-bold);
+  background-color: var(--clr-grey-200);
+  gap: 1.5rem;
+}
+
+main {
+  gap: 45px;
+  max-width: 375px;
+}
+
+.tip-calculator__logo img {
+  width: 144px;
+  height: auto;
+}
+
+fieldset {
+  border: none;
+}
+
+button {
+  font-size: 2.4rem;
+  font-weight: var(--fw-bold);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-group label,
+legend {
+  font-size: 1.6rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-grey-500);
+}
+
+.tip-calculator {
+  padding: 32px;
+  background-color: var(--clr-white);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  gap: 8px;
+}
+
+.tip-calculator__result--wrapper {
+  background-color: var(--clr-green-900);
+  border-radius: 15px;
+  padding: 24px 32px;
+  color: var(--clr-white);
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.result--title {
+  font-size: 1.6rem;
+  font-weight: var(--fw--bold);
+}
+
+.result--detail {
+  font-size: 1.3rem;
+  font-weight: var(--fw-bold);
+}
+
+.result--amount {
+  font-size: 4.8rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: -1px;
+  color: var(--clr-green-400);
+}
