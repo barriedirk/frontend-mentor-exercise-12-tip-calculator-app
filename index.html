@@ -37,8 +37,8 @@
     <script type="module" src="./main.js"></script>
   </head>
   <body>
-    <main class="container">
-      <header class="tip-calculator__logo">
+    <main class="container" role="main">
+      <header class="tip-calculator__logo" role="banner">
         <img src="./images/logo.svg" alt="Logo" />
       </header>
       <form
@@ -46,6 +46,7 @@
         action="/"
         id="form-tip-calculator"
         class="tip-calculator"
+        role="form"
       >
         <div class="form-group form-group-bill">
           <label>Bill</label>
@@ -106,14 +107,14 @@
         </div>
 
         <fieldset class="tip-calculator__result--wrapper">
-          <div class="form-group--result">
+          <div class="form-group--result" role="group">
             <div class="group-result--label">
               <span class="result--title">Tip Amount</span>
               <span class="result--detail">/ person</span>
             </div>
             <span class="result--amount" id="result-tip-amount">$0.00</span>
           </div>
-          <div class="form-group--result">
+          <div class="form-group--result" role="group">
             <div class="group-result--label">
               <span class="result--title">Total</span>
               <span class="result--detail">/ person</span>
@@ -130,9 +131,12 @@
         </fieldset>
       </form>
     </main>
-    <div class="attribution">
+    <div class="attribution" role="contentinfo">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener noreferrer"
         >Frontend Mentor</a
       >. Coded by <a href="#">Barrie Freyre</a>.
     </div>
