@@ -24,7 +24,6 @@
 
     <title>Frontend Mentor | Tip calculator app</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
         font-size: 11px;
@@ -48,56 +47,86 @@
         id="form-tip-calculator"
         class="tip-calculator"
       >
-        <div class="form-group">
+        <div class="form-group form-group-bill">
           <label>Bill</label>
           <input
-            type="number"
+            type="text"
             placeholder="0"
             name="bill"
             id="bill"
-            class="form-input--dollar"
+            class="form-input--dollar icon-dollar currency-input"
+            maxlength="10"
+            data-decimal="2"
+            data-error-message="Bill cannot be zero"
           />
+          <span class="form-error"></span>
         </div>
 
         <fieldset class="tip-calculator__tip--wrapper">
           <legend>Select Tip %</legend>
           <div class="tip-calculator__tips">
-            <button type="button" data-value="5">5%</button>
-            <button type="button" data-value="10">10%</button>
-            <button type="button" data-value="15">15%</button>
-            <button type="button" data-value="25">25%</button>
-            <button type="button" data-value="50">50%</button>
-            <button type="button" data-value="custom">Custom</button>
+            <button type="button" data-tip="5">5%</button>
+            <button type="button" data-tip="10">10%</button>
+            <button type="button" data-tip="15">15%</button>
+            <button type="button" data-tip="25">25%</button>
+            <button type="button" data-tip="50">50%</button>
+            <button type="button" data-tip="custom">Custom</button>
+          </div>
+
+          <div class="form-group form-group-custom-tip hidden">
+            <label>Custom Tip</label>
+            <input
+              type="text"
+              placeholder="0"
+              name="custom-tip"
+              id="custom-tip"
+              class="form-input--dollar icon-dollar currency-input"
+              maxlength="10"
+              data-decimal="2"
+              data-ispercent="false"
+              data-error-message="Can't be zero"
+            />
+            <span class="form-error"></span>
           </div>
         </fieldset>
 
-        <div class="form-group">
+        <div class="form-group form-group-number-people">
           <label>Number of People</label>
           <input
-            type="number"
+            type="text"
             placeholder="0"
-            name="number_people"
-            id="number_people"
-            class="form-input--person"
+            name="number-people"
+            id="number-people"
+            class="form-input--person icon-person"
+            maxlength="3"
+            data-decimal="0"
+            data-error-message="Can't be zero"
           />
+          <span class="form-error">error</span>
         </div>
 
         <fieldset class="tip-calculator__result--wrapper">
           <div class="form-group--result">
-            <label>
+            <div class="group-result--label">
               <span class="result--title">Tip Amount</span>
               <span class="result--detail">/ person</span>
-            </label>
+            </div>
             <span class="result--amount" id="result-tip-amount">$0.00</span>
           </div>
           <div class="form-group--result">
-            <label>
+            <div class="group-result--label">
               <span class="result--title">Total</span>
               <span class="result--detail">/ person</span>
-            </label>
+            </div>
             <span class="result--amount" id="result-tip-total">$0.00</span>
           </div>
-          <button type="reset" class="form-button--reset">Reset</button>
+          <button
+            type="reset"
+            id="tip-calculator-button-reset"
+            class="form-button--reset"
+          >
+            Reset
+          </button>
         </fieldset>
       </form>
     </main>
